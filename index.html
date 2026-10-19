@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBLI 2026 - Inovação, IA & Língua Inglesa | Apresentação para os Pais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            /* High-Contrast Light Mode (Default - Optimized for Projectors & Reading) */
+            --bg-dark: #f8fafc;
+            --bg-body-gradient: linear-gradient(135deg, #f8fafc 0%, #eff6ff 50%, #f1f5f9 100%);
+            --bg-card: #ffffff;
+            --bg-glass: #f1f5f9;
+            --border-glass: #94a3b8;
+            --accent-cyan: #0369a1;
+            --accent-blue: #1d4ed8;
+            --accent-purple: #6d28d9;
+            --accent-pink: #be185d;
+            --accent-gold: #b45309;
+            --accent-gold-bg: #f59e0b;
+            --accent-silver: #334155;
+            --accent-bronze: #b45309;
+            --text-main: #0f172a;
+            --text-muted: #1e293b;
+            --header-bg: rgba(255, 255, 255, 0.96);
+            --card-shadow: 0 10px 28px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.06);
+            --gradient-title: linear-gradient(90deg, #0369a1 0%, #1d4ed8 50%, #6d28d9 100%);
+            --gradient-gold-text: linear-gradient(90deg, #92400e 0%, #b45309 50%, #d97706 100%);
+            --brand-title-grad: linear-gradient(90deg, #0f172a, #0369a1, #6d28d9);
+            --dot-inactive: #94a3b8;
+            --time-node-bg: #ffffff;
+            --date-badge-text: #ffffff;
+            --nav-btn-text: #ffffff;
+            --orb-opacity: 0.08;
+        }
+
+        body.dark-mode {
+            /* Enhanced High-Contrast Dark Mode */
+            --bg-dark: #060913;
+            --bg-body-gradient: radial-gradient(circle at center, #0b1124 0%, #060913 100%);
+            --bg-card: rgba(15, 23, 42, 0.92);
+            --bg-glass: rgba(255, 255, 255, 0.08);
+            --border-glass: rgba(255, 255, 255, 0.25);
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --accent-purple: #a78bfa;
+            --accent-pink: #f472b6;
+            --accent-gold: #fbbf24;
+            --accent-gold-bg: #fbbf24;
+            --accent-silver: #e2e8f0;
+            --accent-bronze: #f59e0b;
+            --text-main: #ffffff;
+            --text-muted: #e2e8f0;
+            --header-bg: rgba(6, 9, 19, 0.88);
+            --card-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+            --gradient-title: linear-gradient(90deg, #38bdf8 0%, #00f2fe 50%, #c084fc 100%);
+            --gradient-gold-text: linear-gradient(90deg, #fde68a 0%, #f59e0b 50%, #fbbf24 100%);
+            --brand-title-grad: linear-gradient(90deg, #fff, var(--accent-cyan));
+            --dot-inactive: rgba(255, 255, 255, 0.35);
+            --time-node-bg: linear-gradient(145deg, rgba(18, 25, 43, 0.95), rgba(30, 41, 70, 0.85));
+            --date-badge-text: #060913;
+            --nav-btn-text: #060913;
+            --orb-opacity: 0.22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-body-gradient);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            user-select: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, .outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Neural Network Canvas Background */
+        #neural-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Ambient Glow Orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: var(--orb-opacity);
+            z-index: 0;
+            pointer-events: none;
+            animation: floatOrb 15s infinite alternate ease-in-out;
+        }
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent-cyan), var(--accent-blue));
+            top: -150px;
+            left: -150px;
+        }
+        .orb-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple), var(--accent-pink));
+            bottom: -200px;
+            right: -150px;
+            animation-delay: -7s;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 40px) scale(1.12); }
+        }
+
+        /* Top Navigation Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            z-index: 50;
+            background: var(--header-bg);
+            backdrop-filter: blur(16px);
+            border-bottom: 2px solid var(--border-glass);
+            box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+            overflow: hidden;
+        }
+
+        .brand-text h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            background: var(--brand-title-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .slide-dots {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dot-inactive);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dot.active {
+            width: 34px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            box-shadow: 0 0 10px rgba(3, 105, 161, 0.4);
+        }
+
+        .dot:hover::after {
+            content: attr(data-title);
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border: 1px solid var(--border-glass);
+            pointer-events: none;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-glass {
+            background: var(--bg-glass);
+            border: 2px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 9px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-glass:hover {
+            background: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(3, 105, 161, 0.25);
+        }
+
+        /* Presentation Slides Container */
+        main {
+            position: relative;
+            z-index: 10;
+            width: 100vw;
+            height: calc(100vh - 74px);
+            margin-top: 74px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 36px 64px 80px 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(30px) scale(0.98);
+            transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                        visibility 0.55s;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .slide-container {
+            max-width: 1360px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Badges & Headings */
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: rgba(3, 105, 161, 0.12);
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            font-size: 0.84rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 18px;
+        }
+
+        .slide-title {
+            font-size: clamp(2.1rem, 3.6vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.12;
+            margin-bottom: 14px;
+            color: var(--text-main);
+        }
+
+        .gradient-text {
+            background: var(--gradient-title);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-gold {
+            background: var(--gradient-gold-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slide-subtitle {
+            font-size: 1.12rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            max-width: 820px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Glass Cards & Grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--border-glass);
+            border-radius: 22px;
+            padding: 26px;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            opacity: 0.9;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: rgba(3, 105, 161, 0.12);
+            border: 2px solid var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+        }
+
+        .glass-card h3, .glass-card h4 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .glass-card p {
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* Hero Feature Panel (No Photos) */
+        .hero-panel {
+            background: var(--bg-card);
+            border: 3px solid var(--accent-cyan);
+            border-radius: 26px;
+            padding: 32px 28px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-gold-bg));
+        }
+
+        .hero-emblem-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 22px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--border-glass);
+        }
+
+        .hero-emblem-icon {
+            width: 68px;
+            height: 68px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(3, 105, 161, 0.3);
+        }
+
+        .hero-feature-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+        }
+
+        .hero-feature-item i {
+            font-size: 1.35rem;
+            color: var(--accent-cyan);
+            width: 32px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .stat-Row {
+            display: flex;
+            gap: 16px;
+            margin-top: 26px;
+            flex-wrap: wrap;
+        }
+
+        .stat-pill {
+            background: var(--bg-card);
+            border: 2px solid var(--border-glass);
+            box-shadow: var(--card-shadow);
+            padding: 14px 20px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .stat-pill i {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+        }
+
+        .stat-pill strong {
+            display: block;
+            font-size: 1.15rem;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-main);
+        }
+
+        .stat-pill span {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* Skills Pills */
+        .skills-bar {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .skill-tag {
+            background: var(--bg-card);
+            border: 2px solid var(--accent-cyan);
+            box-shadow: var(--card-shadow);
+            padding: 9px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+        }
+
+        .skill-tag i {
+            color: var(--accent-cyan);
+        }
+
+        /* Schedule Timeline */
+        .timeline-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+        .time-node {
+            background: var(--time-node-bg);
+            border: 2px solid var(--accent-cyan);
+            box-shadow: var(--card-shadow);
+            border-radius: 20px;
+            padding: 22px;
+            position: relative;
+            color: var(--text-main);
+        }
+
+        .time-node h3 {
+            color: var(--text-main);
+            font-weight: 800;
+        }
+
+        .time-node .date-badge {
+            display: inline-block;
+            background: var(--accent-cyan);
+            color: var(--date-badge-text);
+            font-weight: 800;
+            font-size: 0.82rem;
+            padding: 5px 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Medals Styling */
+        .medal-card {
+            text-align: center;
+            padding: 28px 20px;
+        }
+
+        .medal-circle {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            margin: 0 auto 16px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+        }
+
+        .medal-gold .medal-circle {
+            background: radial-gradient(circle, #fef08a, #f59e0b);
+            color: #451a03;
+            border: 2px solid #d97706;
+        }
+        .medal-silver .medal-circle {
+            background: radial-gradient(circle, #f8fafc, #94a3b8);
+            color: #0f172a;
+            border: 2px solid #64748b;
+        }
+        .medal-bronze .medal-circle {
+            background: radial-gradient(circle, #fed7aa, #d97706);
+            color: #431407;
+            border: 2px solid #b45309;
+        }
+        .medal-honor .medal-circle {
+            background: radial-gradient(circle, #a5f3fc, #0284c7);
+            color: #082f49;
+            border: 2px solid #0369a1;
+        }
+
+        .pct-badge {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+            margin: 6px 0;
+        }
+
+        /* Pride Showcase Slide (Slide 6 - No Photos) */
+        .prep-showcase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pride-showcase-box {
+            max-width: 1080px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 3px solid var(--accent-gold-bg);
+            border-radius: 26px;
+            padding: 34px 32px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pride-showcase-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-gold-bg), var(--accent-cyan), var(--accent-purple));
+        }
+
+        .cta-next-awards {
+            margin-top: 22px;
+            background: linear-gradient(135deg, #fbbf24, #d97706);
+            color: #0f172a;
+            border: 2px solid #92400e;
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .cta-next-awards:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 15px 35px rgba(217, 119, 6, 0.55);
+        }
+
+        /* Animated Floating Emblem */
+        @keyframes owlFloat {
+            0%, 100% { transform: translateY(0px) rotate(-3deg) scale(1); }
+            50% { transform: translateY(-8px) rotate(3deg) scale(1.04); }
+        }
+
+        .owl-companion-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-gold-bg);
+            border-radius: 999px;
+            padding: 10px 22px 10px 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .owl-icon-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fbbf24, #d97706);
+            color: #0f172a;
+            border: 2px solid #92400e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            animation: owlFloat 3.2s infinite ease-in-out;
+            flex-shrink: 0;
+        }
+
+        /* Honor Roll / Awards Layout Without Student Photos (Slide 7) */
+        .honor-roll-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .medalists-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .medalist-honor-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-glass);
+            border-radius: 22px;
+            padding: 22px 26px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .medalist-honor-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .medalist-honor-card.silver-card {
+            border-color: #64748b;
+        }
+        .medalist-honor-card.silver-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(180deg, #e2e8f0, #64748b);
+        }
+
+        .medalist-honor-card.bronze-card {
+            border-color: #d97706;
+        }
+        .medalist-honor-card.bronze-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(180deg, #fbbf24, #b45309);
+        }
+
+        .medalist-emblem {
+            width: 78px;
+            height: 78px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+        }
+
+        .silver-card .medalist-emblem {
+            background: radial-gradient(circle, #f8fafc, #94a3b8);
+            color: #0f172a;
+            border: 2px solid #64748b;
+        }
+
+        .bronze-card .medalist-emblem {
+            background: radial-gradient(circle, #fed7aa, #d97706);
+            color: #431407;
+            border: 2px solid #b45309;
+        }
+
+        .medalist-details {
+            flex: 1;
+        }
+
+        .medalist-details h3 {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 6px 0 4px 0;
+        }
+
+        .medalist-details p {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .certified-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .certified-student-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-glass);
+            border-radius: 18px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .certified-student-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-cyan);
+        }
+
+        .certified-student-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-blue));
+        }
+
+        .cert-emblem {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(3, 105, 161, 0.12);
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.55rem;
+            flex-shrink: 0;
+        }
+
+        .cert-details h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 4px 0 2px 0;
+        }
+
+        .cert-details p {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .award-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .pill-silver {
+            background: #e2e8f0;
+            color: #0f172a;
+            border: 1px solid #64748b;
+        }
+
+        .pill-bronze {
+            background: #d97706;
+            color: #ffffff;
+        }
+
+        .pill-cert {
+            background: #0284c7;
+            color: #ffffff;
+        }
+
+        .collective-honor-banner {
+            background: var(--bg-card);
+            border: 2px solid var(--accent-gold-bg);
+            border-radius: 18px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Official Links for Parents */
+        .official-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .official-link-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            border-radius: 16px;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-cyan);
+            color: var(--text-main);
+            text-decoration: none;
+            box-shadow: var(--card-shadow);
+            transition: all 0.28s ease;
+        }
+
+        .official-link-card:hover {
+            transform: translateY(-3px);
+            background: var(--accent-cyan);
+            color: #ffffff;
+            box-shadow: 0 10px 24px rgba(3, 105, 161, 0.35);
+        }
+
+        .official-link-card i {
+            font-size: 1.45rem;
+            color: var(--accent-cyan);
+            transition: color 0.28s ease;
+            flex-shrink: 0;
+        }
+
+        .official-link-card:hover i,
+        .official-link-card:hover strong,
+        .official-link-card:hover span {
+            color: #ffffff !important;
+        }
+
+        .official-link-card strong {
+            display: block;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-main);
+        }
+
+        .official-link-card span {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            word-break: break-all;
+        }
+
+        /* Bottom Controls Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 60;
+            background: var(--header-bg);
+            backdrop-filter: blur(18px);
+            border: 2px solid var(--border-glass);
+            padding: 10px 20px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border: none;
+            color: var(--nav-btn-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            font-weight: 800;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 16px var(--accent-cyan);
+        }
+
+        .slide-counter {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            min-width: 90px;
+            text-align: center;
+        }
+
+        @media (max-width: 1100px) {
+            .grid-2, .grid-3, .grid-4, .timeline-box, .medalists-row, .certified-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .slide {
+                padding: 24px 28px 90px 28px;
+                justify-content: flex-start;
+            }
+        }
+        @media (max-width: 700px) {
+            .grid-2, .grid-3, .grid-4, .timeline-box, .medalists-row, .certified-row, .official-links-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 0 16px;
+            }
+            .slide-dots {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <canvas id="neural-canvas"></canvas>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="brand">
+            <div class="brand-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="brand-text">
+                <h4>OBLI 2026 • TECH & AI EDITION</h4>
+                <span>Colégio Estadual Nossa Senhora de Lourdes</span>
+            </div>
+        </div>
+
+        <div class="slide-dots" id="slide-dots">
+            <div class="dot active" data-index="0" data-title="Boas-vindas & Visão"></div>
+            <div class="dot" data-index="1" data-title="O que é a OBLI & Objetivos"></div>
+            <div class="dot" data-index="2" data-title="Tecnologia, IA & A Prova"></div>
+            <div class="dot" data-index="3" data-title="Níveis & Cronograma 2026"></div>
+            <div class="dot" data-index="4" data-title="Sistema de Premiação"></div>
+            <div class="dot" data-index="5" data-title="Orgulho da Nossa Escola"></div>
+            <div class="dot" data-index="6" data-title="Quadro de Honra & Premiados"></div>
+            <div class="dot" data-index="7" data-title="Parceria Escola & Família"></div>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn-glass" id="theme-toggle-btn" onclick="toggleTheme()" title="Alternar entre Modo Escuro e Modo Claro">
+                <i class="fa-solid fa-sun" id="theme-icon"></i> <span id="theme-label">Modo Claro</span>
+            </button>
+            <button class="btn-glass" onclick="toggleFullScreen()" title="Tela Cheia">
+                <i class="fa-solid fa-expand"></i> <span>Tela Cheia</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Slides -->
+    <main id="slides-wrapper">
+
+        <!-- SLIDE 1: HERO -->
+        <section class="slide active">
+            <div class="slide-container grid-2">
+                <div>
+                    <div class="ai-badge">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Educação do Futuro • Inteligência Artificial & Inglês
+                    </div>
+                    <h1 class="slide-title">
+                        Preparando Nossos Filhos para um <span class="gradient-text">Mundo Global e Tecnológico</span>
+                    </h1>
+                    <p class="slide-subtitle">
+                        Olá, pais e responsáveis! Conheçam como a <strong>Olimpíada Brasileira de Língua Inglesa (OBLI)</strong>, aliada às modernas ferramentas digitais e à Inteligência Artificial na educação, está transformando o aprendizado e abrindo portas reais para o futuro dos nossos estudantes.
+                    </p>
+
+                    <div class="stat-Row">
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-globe"></i>
+                            <div>
+                                <strong>Fluência Global</strong>
+                                <span>O idioma oficial da tecnologia e da IA</span>
+                            </div>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-microchip"></i>
+                            <div>
+                                <strong>100% Digital</strong>
+                                <span>Avaliação interativa com áudio e vídeo</span>
+                            </div>
+                        </div>
+                        <div class="stat-pill">
+                            <i class="fa-solid fa-award"></i>
+                            <div>
+                                <strong>Certificação Nacional</strong>
+                                <span>Reconhecimento de mérito estudantil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="hero-panel">
+                        <div class="hero-emblem-header">
+                            <div class="hero-emblem-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.8rem; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px;">Informativo Oficial às Famílias</span>
+                                <h3 style="font-size: 1.5rem; color: var(--text-main); margin-top: 2px;">OBLI 2026 • Edição Tecnológica</h3>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Colégio Estadual Nossa Senhora de Lourdes</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature-list">
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-laptop-file"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.98rem;">Avaliação Moderna no Colégio</strong>
+                                    <span style="font-size: 0.86rem; color: var(--text-muted);">Aplicação no Laboratório de Informática com recursos audiovisuais.</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-medal" style="color: var(--accent-gold);"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.98rem;">Tradição de Conquistas</strong>
+                                    <span style="font-size: 0.86rem; color: var(--text-muted);">Nossa escola já acumula medalhas nacionais de Prata, Bronze e dezenas de certificados!</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-calendar-check" style="color: var(--accent-purple);"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.98rem;">Agenda Oficial: 21 de Outubro de 2026</strong>
+                                    <span style="font-size: 0.86rem; color: var(--text-muted);">Check-in às 7h30 • Aplicação da prova das 8h00 às 10h00.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: O QUE É A OBLI & OBJETIVOS -->
+        <section class="slide">
+            <div class="slide-container">
+                <div class="ai-badge">
+                    <i class="fa-solid fa-compass"></i> Propósito Pedagógico
+                </div>
+                <h2 class="slide-title">O que é a <span class="gradient-text">OBLI</span> e o que ela desenvolve?</h2>
+                <p class="slide-subtitle" style="margin-bottom: 18px;">
+                    A Olimpíada Brasileira de Língua Inglesa é uma competição educacional nacional que desafia estudantes e educadores a explorarem o idioma de forma viva, crítica e conectada às novas tecnologias.
+                </p>
+
+                <div class="skills-bar">
+                    <div class="skill-tag"><i class="fa-solid fa-headphones"></i> Listening (Compreensão Auditiva)</div>
+                    <div class="skill-tag"><i class="fa-solid fa-book-open-reader"></i> Reading (Leitura Crítica)</div>
+                    <div class="skill-tag"><i class="fa-solid fa-pen-nib"></i> Writing (Escrita)</div>
+                    <div class="skill-tag"><i class="fa-solid fa-comments"></i> Speaking (Comunicação Oral)</div>
+                </div>
+
+                <div class="grid-3">
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+                        <h3>1. Proficiência Integral</h3>
+                        <p>Estimula o domínio prático do inglês nas quatro habilidades fundamentais para o mundo real.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                        <h3>2. Competência Intercultural</h3>
+                        <p>Capacita o aluno para se comunicar com eficácia e empatia em diferentes contextos globais.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-photo-film"></i></div>
+                        <h3>3. Múltiplas Mídias & IA</h3>
+                        <p>Utiliza variadas linguagens digitais, vídeos, áudios e plataformas inteligentes de aprendizagem.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <h3>4. Diversidade Cultural</h3>
+                        <p>Valoriza a pluralidade linguística e cultural, promovendo o respeito e o entendimento mútuo.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>5. Pensamento Crítico</h3>
+                        <p>Desenvolve interpretação avançada e raciocínio analítico diretamente em língua inglesa.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>6. Futuro Acadêmico & Carreira</h3>
+                        <p>Prepara os jovens para universidades, intercâmbios e carreiras na era da Inteligência Artificial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: ESTILO DE PROVA & IMERSÃO DIGITAL -->
+        <section class="slide">
+            <div class="slide-container grid-2">
+                <div>
+                    <div class="ai-badge">
+                        <i class="fa-solid fa-laptop-code"></i> Avaliação Imersiva & Tecnológica
+                    </div>
+                    <h2 class="slide-title">Como funciona o <span class="gradient-text">Desafio Online?</span></h2>
+                    <p class="slide-subtitle">
+                        Mais do que uma prova tradicional no papel, os alunos vivenciam uma experiência digital moderna no laboratório de informática do nosso colégio, utilizando headsets e recursos multimídia.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="glass-card">
+                            <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                            <h3>30 Questões Objetivas</h3>
+                            <p>Formato 100% online e individual, com foco em resolução de problemas e interpretação.</p>
+                        </div>
+                        <div class="glass-card">
+                            <div class="card-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                            <h3>2 Horas de Duração</h3>
+                            <p>Tempo máximo de duas horas corridas, treinando gestão de tempo e foco sob medida.</p>
+                        </div>
+                        <div class="glass-card" style="grid-column: span 2;">
+                            <div style="display:flex; align-items:center; gap: 18px;">
+                                <div class="card-icon" style="margin-bottom:0; flex-shrink:0;"><i class="fa-solid fa-circle-play"></i></div>
+                                <div>
+                                    <h3>10 Questões com Áudio e Vídeo Integrados</h3>
+                                    <p>Um terço da avaliação testa a compreensão auditiva real (Listening) através de vídeos e diálogos autênticos em inglês.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="hero-panel">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 6px; color: var(--text-main);">
+                            <i class="fa-solid fa-computer" style="color: var(--accent-cyan); margin-right: 8px;"></i> Estrutura no Laboratório do Colégio
+                        </h3>
+                        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 18px;">
+                            Todo o ambiente é preparado pela nossa equipe para que cada estudante realize a prova com tranquilidade e concentração:
+                        </p>
+
+                        <div class="hero-feature-list">
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-headset"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.96rem;">Imersão com Headsets Individuais</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-muted);">Equipamentos de áudio para ouvir diálogos e vídeos em inglês com clareza.</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-desktop"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.96rem;">Estações Individuais Conectadas</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-muted);">Cada aluno realiza seu acesso exclusivo na plataforma oficial da olimpíada.</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-user-shield"></i>
+                                <div>
+                                    <strong style="display:block; color: var(--text-main); font-size: 0.96rem;">Acompanhamento Pedagógico Presencial</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-muted);">Professores presentes no laboratório dando suporte técnico e acolhimento.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 18px; padding-top: 14px; border-top: 2px dashed var(--border-glass);">
+                            <span style="font-size: 0.8rem; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 8px;">
+                                <i class="fa-solid fa-link"></i> Acesse e Conheça o Desafio e Provas Anteriores:
+                            </span>
+                            <div class="official-links-grid" style="margin-top: 0;">
+                                <a href="https://www.seletaeducacao.com.br/obli" target="_blank" rel="noopener noreferrer" class="official-link-card">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <div>
+                                        <strong>Sobre o Desafio OBLI</strong>
+                                        <span>seletaeducacao.com.br/obli</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.seletaeducacao.com.br/obli-provas-e-resultados" target="_blank" rel="noopener noreferrer" class="official-link-card">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    <div>
+                                        <strong>Provas Anteriores & Resultados</strong>
+                                        <span>seletaeducacao.com.br/obli-provas-e-resultados</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: PARTICIPAÇÃO & PROGRAMAÇÃO 2026 -->
+        <section class="slide">
+            <div class="slide-container">
+                <div class="ai-badge">
+                    <i class="fa-solid fa-calendar-check"></i> Organização & Cronograma Oficial
+                </div>
+                <h2 class="slide-title">Níveis de Participação & <span class="gradient-text">Datas Importantes</span></h2>
+                <p class="slide-subtitle" style="margin-bottom: 16px;">
+                    A olimpíada respeita o estágio de desenvolvimento de cada faixa etária, dividindo os estudantes em 3 níveis estratégicos:
+                </p>
+
+                <div class="grid-3" style="margin-bottom: 20px;">
+                    <div class="glass-card" style="padding: 20px;">
+                        <span style="color:var(--accent-cyan); font-weight:800; font-size:0.85rem;">NÍVEL 1</span>
+                        <h3 style="margin-top:4px;">6º e 7º Anos</h3>
+                        <p>Ensino Fundamental II — Construção de base comunicativa, vocabulário e curiosidade pelo idioma.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 20px;">
+                        <span style="color:var(--accent-purple); font-weight:800; font-size:0.85rem;">NÍVEL 2</span>
+                        <h3 style="margin-top:4px;">8º e 9º Anos</h3>
+                        <p>Ensino Fundamental II — Consolidação da leitura crítica, compreensão audiovisual e autonomia digital.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 20px;">
+                        <span style="color:var(--accent-gold); font-weight:800; font-size:0.85rem;">NÍVEL 3</span>
+                        <h3 style="margin-top:4px;">Ensino Médio</h3>
+                        <p>Foco em proficiência avançada, ENEM, vestibulares e prontidão para o mercado global.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--accent-cyan);">
+                    <i class="fa-regular fa-clock"></i> Programação Oficial 2026 & Links para Consulta
+                </h3>
+                <div class="timeline-box" style="margin-top: 12px;">
+                    <div class="time-node">
+                        <span class="date-badge">21 de Outubro de 2026</span>
+                        <h3><i class="fa-solid fa-desktop"></i> Aplicação da Prova</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:6px;">
+                            Realizada presencialmente no <strong>Laboratório de Informática do nosso Colégio</strong> com suporte completo.<br>
+                            <a href="https://www.seletaeducacao.com.br/obli" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); font-weight:700; text-decoration:underline; display:inline-block; margin-top:6px;">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Informações do Desafio (seletaeducacao.com.br/obli)
+                            </a>
+                        </p>
+                    </div>
+                    <div class="time-node">
+                        <span class="date-badge" style="background: var(--accent-purple); color:#fff;">Horário Oficial</span>
+                        <h3><i class="fa-solid fa-bell"></i> Check-in às 7h30</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:6px;">
+                            Acolhimento e preparação às <strong>7h30</strong>.<br>
+                            Início e término da prova: <strong>8h00 às 10h00</strong>.
+                        </p>
+                    </div>
+                    <div class="time-node">
+                        <span class="date-badge" style="background: var(--accent-gold-bg); color:#060913;">28 de Outubro de 2026</span>
+                        <h3><i class="fa-solid fa-trophy"></i> Provas Passadas & Resultados</h3>
+                        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:6px;">
+                            Consulte avaliações anteriores para estudo e a divulgação oficial no portal da <strong>Seleta Educação</strong>:<br>
+                            <a href="https://www.seletaeducacao.com.br/obli-provas-e-resultados" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); font-weight:700; text-decoration:underline; display:inline-block; margin-top:6px;">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Provas e Resultados Oficiais
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: PREMIAÇÃO -->
+        <section class="slide">
+            <div class="slide-container">
+                <div class="ai-badge">
+                    <i class="fa-solid fa-medal"></i> Reconhecimento Nacional
+                </div>
+                <h2 class="slide-title">Critérios de <span class="gradient-gold">Premiação e Certificação</span></h2>
+                <p class="slide-subtitle">
+                    <strong>Todos os participantes recebem Certificado Digital Oficial de Participação (com carga horária de 5 horas)!</strong> Além disso, os alunos com os melhores desempenhos nacionais conquistam medalhas exclusivas:
+                </p>
+
+                <div class="grid-4">
+                    <div class="glass-card medal-card medal-gold">
+                        <div class="medal-circle"><i class="fa-solid fa-crown"></i></div>
+                        <h3>Medalha de Ouro</h3>
+                        <span class="pct-badge gradient-gold">Top 2%</span>
+                        <p>Concedida aos 2% de alunos com as melhores notas nacionais.</p>
+                    </div>
+
+                    <div class="glass-card medal-card medal-silver">
+                        <div class="medal-circle"><i class="fa-solid fa-medal"></i></div>
+                        <h3>Medalha de Prata</h3>
+                        <span class="pct-badge" style="color: var(--accent-silver);">4%</span>
+                        <p>Para os 4% de alunos com as melhores notas subsequentes.</p>
+                    </div>
+
+                    <div class="glass-card medal-card medal-bronze">
+                        <div class="medal-circle"><i class="fa-solid fa-award"></i></div>
+                        <h3>Medalha de Bronze</h3>
+                        <span class="pct-badge" style="color: var(--accent-bronze);">8%</span>
+                        <p>Para os 8% de alunos com as melhores notas subsequentes.</p>
+                    </div>
+
+                    <div class="glass-card medal-card medal-honor">
+                        <div class="medal-circle"><i class="fa-solid fa-star"></i></div>
+                        <h3>Honra ao Mérito</h3>
+                        <span class="pct-badge" style="color: var(--accent-cyan);">16%</span>
+                        <p>Destaque especial para os 16% de alunos subsequentes no ranking.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="margin-top: 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+                    <div style="display:flex; align-items:center; gap:16px;">
+                        <i class="fa-solid fa-certificate" style="font-size: 2.2rem; color: var(--accent-gold);"></i>
+                        <div>
+                            <h4 style="font-size:1.1rem;">Valorização para o Currículo Estudantil</h4>
+                            <p style="font-size:0.9rem; color:var(--text-muted);">Cada certificado possui QR Code de autenticidade e valida a dedicação acadêmica do estudante em âmbito nacional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: O ORGULHO DA NOSSA ESCOLA (SEM FOTOS) -->
+        <section class="slide">
+            <div class="slide-container prep-showcase">
+                <div class="ai-badge" style="margin-bottom: 12px;">
+                    <i class="fa-solid fa-trophy"></i> Mérito Estudantil • OBLI
+                </div>
+                <h2 class="slide-title" style="font-size: clamp(1.9rem, 3.2vw, 2.9rem); margin-bottom: 16px;">
+                    O Verdadeiro Orgulho da <span class="gradient-gold">Nossa Escola!</span>
+                </h2>
+
+                <div class="pride-showcase-box">
+                    <p style="font-size: 1.08rem; color: var(--text-muted); max-width: 820px; margin: 0 auto 26px auto; line-height: 1.6;">
+                        No <strong>Colégio Estadual Nossa Senhora de Lourdes</strong>, incentivamos nossos alunos a acreditarem em seu potencial. Os resultados alcançados na Olimpíada Brasileira de Língua Inglesa demonstram na prática a dedicação dos nossos jovens e a força do ensino público de qualidade!
+                    </p>
+
+                    <div class="grid-3" style="text-align: center;">
+                        <div class="glass-card medal-silver" style="padding: 22px 18px;">
+                            <div class="medal-circle" style="width: 64px; height: 64px; font-size: 1.7rem;"><i class="fa-solid fa-medal"></i></div>
+                            <h3 style="font-size: 1.2rem;">Destaque de Prata</h3>
+                            <p style="font-size: 0.9rem;">Reconhecimento entre os melhores desempenhos em nível nacional.</p>
+                        </div>
+
+                        <div class="glass-card medal-bronze" style="padding: 22px 18px;">
+                            <div class="medal-circle" style="width: 64px; height: 64px; font-size: 1.7rem;"><i class="fa-solid fa-award"></i></div>
+                            <h3 style="font-size: 1.2rem;">Destaque de Bronze</h3>
+                            <p style="font-size: 0.9rem;">Medalha nacional conquistada com foco, leitura crítica e dedicação.</p>
+                        </div>
+
+                        <div class="glass-card medal-honor" style="padding: 22px 18px;">
+                            <div class="medal-circle" style="width: 64px; height: 64px; font-size: 1.7rem;"><i class="fa-solid fa-certificate"></i></div>
+                            <h3 style="font-size: 1.2rem;">Certificação Oficial</h3>
+                            <p style="font-size: 0.9rem;">Dezenas de estudantes certificados com carga horária nacional de 5 horas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="cta-next-awards" onclick="changeSlide(1)">
+                    <i class="fa-solid fa-ranking-star"></i> Ver Quadro de Honra Nominal <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: NOSSOS RESULTADOS (QUADRO DE HONRA SEM IMAGENS DE ALUNOS) -->
+        <section class="slide">
+            <div class="slide-container">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 20px;">
+                    <div>
+                        <div class="ai-badge" style="margin-bottom: 8px;">
+                            <i class="fa-solid fa-star"></i> Quadro de Honra & Reconhecimento
+                        </div>
+                        <h2 class="slide-title" style="margin-bottom: 4px; font-size: clamp(1.9rem, 3vw, 2.8rem);">
+                            Nossos Resultados: <span class="gradient-gold">Orgulho que Inspira!</span>
+                        </h2>
+                        <p style="color: var(--text-muted); font-size: 0.98rem;">
+                            Homenagem nominal aos estudantes que se destacaram e representaram nosso colégio na OBLI:
+                        </p>
+                    </div>
+
+                    <div class="owl-companion-badge">
+                        <div class="owl-icon-circle">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <strong style="color: var(--accent-gold); font-size: 0.95rem; display:block;">Parabéns, Campeões!</strong>
+                            <span style="font-size: 0.82rem; color: var(--text-main);">Mérito Acadêmico • Língua Inglesa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="honor-roll-wrapper">
+                    <!-- Destaques Medalhistas -->
+                    <div class="medalists-row">
+                        <!-- Maria Fernanda - Prata -->
+                        <div class="medalist-honor-card silver-card">
+                            <div class="medalist-emblem">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="medalist-details">
+                                <span class="award-pill pill-silver"><i class="fa-solid fa-medal"></i> Medalha de Prata</span>
+                                <h3>Maria Fernanda C. Ribeiro</h3>
+                                <p>Destaque Nacional • Conquista de Prata na OBLI</p>
+                            </div>
+                        </div>
+
+                        <!-- José de Almeida - Bronze -->
+                        <div class="medalist-honor-card bronze-card">
+                            <div class="medalist-emblem">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="medalist-details">
+                                <span class="award-pill pill-bronze"><i class="fa-solid fa-medal"></i> Medalha de Bronze</span>
+                                <h3>José de Almeida M. e Costa</h3>
+                                <p>Destaque Nacional • Medalha de Bronze na OBLI</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destaques Certificados -->
+                    <div class="certified-row">
+                        <!-- Bianca Kyara -->
+                        <div class="certified-student-card">
+                            <div class="cert-emblem">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="cert-details">
+                                <span class="award-pill pill-cert"><i class="fa-solid fa-check-double"></i> Certificado</span>
+                                <h4>Bianca Kyara Da Silva</h4>
+                                <p>Certificado Oficial • 5 Horas</p>
+                            </div>
+                        </div>
+
+                        <!-- Peter Nunes Porto -->
+                        <div class="certified-student-card">
+                            <div class="cert-emblem">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="cert-details">
+                                <span class="award-pill pill-cert"><i class="fa-solid fa-check-double"></i> Certificado</span>
+                                <h4>Peter Nunes Porto</h4>
+                                <p>Certificado Oficial • 5 Horas</p>
+                            </div>
+                        </div>
+
+                        <!-- Luíza Natsumi Maeoka -->
+                        <div class="certified-student-card">
+                            <div class="cert-emblem">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="cert-details">
+                                <span class="award-pill pill-cert"><i class="fa-solid fa-check-double"></i> Certificado</span>
+                                <h4>Luíza Natsumi Maeoka</h4>
+                                <p>Certificado Oficial • 5 Horas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reconhecimento Coletivo -->
+                    <div class="collective-honor-banner">
+                        <div style="display:flex; align-items:center; gap:16px;">
+                            <div class="owl-icon-circle" style="animation:none; width:48px; height:48px; font-size:1.25rem;">
+                                <i class="fa-solid fa-users-rays"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.08rem; font-weight: 800; color: var(--text-main);">Celebração Coletiva no Colégio Estadual Nossa Senhora de Lourdes</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Dezenas de alunos certificados, motivados e confiantes no aprendizado de Língua Inglesa!</p>
+                            </div>
+                        </div>
+                        <span class="award-pill pill-bronze" style="white-space:nowrap; padding: 6px 14px;">
+                            <i class="fa-solid fa-star"></i> Honra & Reconhecimento
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: TECNOLOGIA, IA & PARCERIA COM OS PAIS -->
+        <section class="slide">
+            <div class="slide-container grid-2">
+                <div>
+                    <div class="ai-badge">
+                        <i class="fa-solid fa-handshake-angle"></i> Escola + Família + Tecnologia
+                    </div>
+                    <h2 class="slide-title">Por que o Inglês + <span class="gradient-text">Inteligência Artificial</span> mudam tudo?</h2>
+                    <p class="slide-subtitle">
+                        Vivemos a maior revolução tecnológica da história. A Inteligência Artificial generativa, a programação e a ciência global falam inglês. Quando preparamos nossos alunos com plataformas gamificadas e desafios como a OBLI, entregamos a eles a chave do futuro.
+                    </p>
+
+                    <div class="glass-card" style="margin-bottom: 14px; padding: 20px 24px;">
+                        <h3 style="color: var(--accent-cyan); margin-bottom: 10px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-heart"></i> Como a família pode apoiar em casa?
+                        </h3>
+                        <ul style="list-style: none; display: grid; gap: 8px; color: var(--text-main); font-size: 0.92rem;">
+                            <li><i class="fa-solid fa-check-circle" style="color:var(--accent-cyan); margin-right:8px;"></i> <strong>Incentive a participação:</strong> Elogie o esforço e a coragem de encarar desafios acadêmicos.</li>
+                            <li><i class="fa-solid fa-check-circle" style="color:var(--accent-cyan); margin-right:8px;"></i> <strong>Pratique com provas anteriores:</strong> Explore junto com seu filho(a) as avaliações passadas da OBLI.</li>
+                            <li><i class="fa-solid fa-check-circle" style="color:var(--accent-cyan); margin-right:8px;"></i> <strong>Atenção ao dia 21/10/2026:</strong> Uma boa noite de sono e chegada pontual no check-in às <strong>7h30</strong>!</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <span style="font-size: 0.82rem; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 8px;">
+                            <i class="fa-solid fa-globe"></i> Links Oficiais para Pais e Responsáveis (Clique para Acessar):
+                        </span>
+                        <div class="official-links-grid" style="margin-top: 0;">
+                            <a href="https://www.seletaeducacao.com.br/obli" target="_blank" rel="noopener noreferrer" class="official-link-card">
+                                <i class="fa-solid fa-compass"></i>
+                                <div>
+                                    <strong>Página Oficial do Desafio OBLI</strong>
+                                    <span>https://www.seletaeducacao.com.br/obli</span>
+                                </div>
+                            </a>
+                            <a href="https://www.seletaeducacao.com.br/obli-provas-e-resultados" target="_blank" rel="noopener noreferrer" class="official-link-card">
+                                <i class="fa-solid fa-file-circle-check"></i>
+                                <div>
+                                    <strong>Provas Passadas & Resultados</strong>
+                                    <span>https://www.seletaeducacao.com.br/obli-provas-e-resultados</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="glass-card" style="text-align: center; padding: 34px 28px; border-color: rgba(3, 105, 161, 0.4);">
+                        <div class="owl-icon-circle" style="width: 84px; height: 84px; font-size: 2.2rem; margin: 0 auto 18px auto;">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 12px;" class="outfit">
+                            "Educar & Construir Sonhos & Transformar Vidas"
+                        </h3>
+                        <p style="font-size: 0.98rem; color: var(--text-muted); margin-bottom: 22px;">
+                            Muito obrigado pela atenção, pelo apoio e pela parceria de cada pai, mãe e responsável. Juntos, estamos formando cidadãos preparados para conquistar o mundo!
+                        </p>
+                        <div style="padding: 16px; border-radius: 14px; background: var(--bg-glass); border: 2px solid var(--border-glass);">
+                            <strong style="color: var(--accent-gold); display:block; font-size: 1.05rem;">
+                                <i class="fa-solid fa-calendar-day"></i> Grande Encontro OBLI: 21 de Outubro de 2026
+                            </strong>
+                            <span style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted);">
+                                Laboratório de Informática • Check-in 7h30 • Prova das 8h às 10h
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <button class="nav-btn" onclick="changeSlide(-1)" title="Slide Anterior (Seta Esquerda)">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slide-counter" id="slide-counter">1 / 8</div>
+        <button class="nav-btn" onclick="changeSlide(1)" title="Próximo Slide (Seta Direita)">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script>
+        // Slide Navigation Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const counter = document.getElementById('slide-counter');
+
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentSlide = index;
+
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === currentSlide);
+            });
+            dots.forEach((d, i) => {
+                d.classList.toggle('active', i === currentSlide);
+            });
+            counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function changeSlide(step) {
+            showSlide(currentSlide + step);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                showSlide(parseInt(dot.getAttribute('data-index')));
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+
+        // Theme Toggle (Dark Mode Default vs Light Mode)
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            const label = document.getElementById('theme-label');
+            if (isDark) {
+                icon.className = 'fa-solid fa-sun';
+                label.textContent = 'Modo Claro';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+                label.textContent = 'Modo Escuro';
+            }
+        }
+
+        // Fullscreen Toggle
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Interactive AI Neural Particle Network Background
+        const canvas = document.getElementById('neural-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.55;
+                this.vy = (Math.random() - 0.5) * 0.55;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+            draw() {
+                const isDark = document.body.classList.contains('dark-mode');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = isDark ? 'rgba(0, 242, 254, 0.55)' : 'rgba(3, 105, 161, 0.35)';
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(75, Math.floor((canvas.width * canvas.height) / 18000));
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const isDark = document.body.classList.contains('dark-mode');
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 145) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = isDark
+                            ? `rgba(0, 242, 254, ${0.14 * (1 - dist / 145)})`
+                            : `rgba(3, 105, 161, ${0.12 * (1 - dist / 145)})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+    </script>
+</body>
+</html>
